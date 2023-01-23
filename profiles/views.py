@@ -14,7 +14,6 @@ class ProfileList(APIView):
         serializer = ProfileSerializer(
             profiles, many=True, context={'reuqest': request}
         )
-            
         return Response(serializer.data)
 
 
