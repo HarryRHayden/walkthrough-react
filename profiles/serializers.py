@@ -7,7 +7,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
-        request = self.context['reuqest']
+        request = self.context['request']
         return request.user == obj.owner
 
     class Meta:
